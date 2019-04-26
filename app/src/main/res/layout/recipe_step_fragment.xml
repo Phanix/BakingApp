@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recipe_step_fragment_id"
+    >
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:layout_weight="1"
+        android:id="@+id/exoplayer_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+
+    <TextView
+        android:text="text"
+        android:textSize="25sp"
+        android:id="@+id/recipe_instruction"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <Button
+        android:text="@string/navigation_recipe"
+        android:layout_weight="0.2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+</LinearLayout>
