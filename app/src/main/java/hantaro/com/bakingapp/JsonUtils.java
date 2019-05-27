@@ -1,6 +1,6 @@
 package hantaro.com.bakingapp;
 
-import android.util.Log;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,30 +15,29 @@ import java.util.List;
 
 public class JsonUtils {
 
-
-    public static String convertInputStream(InputStream inputStream){
+    public static String convertInputStream(InputStream inputStream) {
         StringBuilder stringBuilder = new StringBuilder();
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         try {
             String line = bufferedReader.readLine();
-            while(line != null){
+            while (line != null) {
                 stringBuilder.append(line);
                 line = bufferedReader.readLine();
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return stringBuilder.toString();
     }
 
-    public static List<Recipe> parserRecipes(String recipesJson){
+    public static List<Recipe> parserRecipes(String recipesJson) {
 
         List<Recipe> recipes = new ArrayList<>();
         try {
             JSONArray jsonArray = new JSONArray(recipesJson);
 
-            for(int k = 0; k < jsonArray.length(); k++) {
+            for (int k = 0; k < jsonArray.length(); k++) {
                 List<Ingredient> ingredients = new ArrayList<>();
                 List<Step> steps = new ArrayList<>();
                 JSONObject jsonObject1 = jsonArray.getJSONObject(k);
@@ -69,13 +68,10 @@ public class JsonUtils {
 
                 //Add the new Recipe to the list of recipes
                 recipes.add(new Recipe(name, ingredients, steps, servings, imageURL));
-
             }
-
-        }catch (JSONException e){
+        } catch (JSONException e) {
             e.printStackTrace();
         }
         return recipes;
     }
-
 }

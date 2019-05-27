@@ -17,10 +17,9 @@ public class IngredientsDetails extends AppCompatActivity {
         Recipe recipe = (Recipe) intent.getSerializableExtra("recipe");
         TextView textView = findViewById(R.id.tv_ingredients);
         List<Ingredient> ingredients = recipe.getIngredients();
-        for(Ingredient ingredient : ingredients){
+        for (Ingredient ingredient : ingredients) {
             textView.append("*" + ingredient.getIngredient() + "\n");
-            textView.append( ingredient.getQuantity() + " : " + ingredient.getMeasure() + "\n\n\n");
+            textView.append(ingredient.getQuantity() + " : " + ingredient.getMeasure() + "\n\n\n");
         }
-
     }
 }

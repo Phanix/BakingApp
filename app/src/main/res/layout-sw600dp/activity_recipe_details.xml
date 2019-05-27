@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <fragment
+        android:layout_weight="1"
+        android:id="@+id/master_list_fragment"
+        android:name="hantaro.com.bakingapp.MasterListFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"></fragment>
+
+ <FrameLayout
+     android:id="@+id/step_id"
+     android:layout_weight="1"
+     android:layout_width="0dp"
+     android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

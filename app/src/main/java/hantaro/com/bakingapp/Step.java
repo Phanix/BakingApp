@@ -46,19 +46,4 @@ public class Step implements Serializable {
         return mThumbnailUrl;
     }
 
-    public void setShortDescription(String shortDescription) {
-        mShortDescription = shortDescription;
-    }
-
-    public void setDescription(String description) {
-        mDescription = description;
-    }
-
-    public void setVideoURL(String videoURL) {
-        mVideoURL = videoURL;
-    }
-
-    public void setThumbnailUrl(String thumbnailUrl) {
-        mThumbnailUrl = thumbnailUrl;
-    }
 }

@@ -34,32 +34,12 @@ public class Recipe implements Serializable {
         return mIngredients;
     }
 
-    public void setIngredients(List<Ingredient> ingredients) {
-        mIngredients = ingredients;
-    }
-
     public List<Step> getSteps() {
         return mSteps;
     }
 
-    public void setSteps(List<Step> steps) {
-        mSteps = steps;
-    }
-
-    public String getServings() {
-        return mServings;
-    }
-
-    public void setServings(String servings) {
-        mServings = servings;
-    }
-
     public String getImageURL() {
         return mImageURL;
-    }
-
-    public void setImageURL(String imageURL) {
-        mImageURL = imageURL;
     }
 }
 

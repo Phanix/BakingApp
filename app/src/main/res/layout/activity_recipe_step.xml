@@ -9,11 +9,10 @@
     android:id="@+id/activity_recipe_step"
     >
 
-
-    <FrameLayout
-
-        android:id="@+id/recipe_id"
+    <fragment
+        android:name="hantaro.com.bakingapp.RecipeStepFragment"
+        android:id="@+id/recipe_step"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></FrameLayout>
+        android:layout_height="wrap_content"></fragment>
 
 </LinearLayout>
